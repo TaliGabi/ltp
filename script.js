@@ -1,8 +1,3 @@
-divListaProdutoDestaque.insertAdjacentHTML('afterbegin', 'mostrar_produtos_destaque');
-var divListaProdutoDestaque = document.getElementById('produto-destaque');
-divListaProduto.insertAdjacentHTML('afterbegin', 'mostrar_produtos');
-var divListaProduto = document.getElementById('lista-produtos');
-
 class Produto{
   constructor(nome,dataCadastro,descricao,preco){
     nome = this.nome,
@@ -32,6 +27,12 @@ class ProdutoDestaque extends Produto{
 }
 }
 
-const produto = new ProdutoDestaque ("Album Face", "03-05","Album Kpop","150,00","www.imagenspng.com.br/wp-content/uploads/2022/04/flork-png-08-600x568.png")
-
+//const produto = new ProdutoDestaque ("Album Face", "03-05","Album Kpop","150,00","www.imagenspng.com.br/wp-content/uploads/2022/04/flork-png-08-600x568.png")
+const produtoDois = new Produto ("Album Face", "03-05","Album Kpop","150,00")
 //git init//
+
+//let produtosDest = document.getElementById("produto-destaque")
+let produtos = document.getElementById("lista-produtos")
+
+//produtosDest.insertAdjacentHTML('afterbegin', 'mostrar_produtos_destaque');
+produtos.insertAdjacentHTML('afterbegin', 'mostrar_produtos');
