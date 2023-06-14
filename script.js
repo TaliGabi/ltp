@@ -1,9 +1,9 @@
 class Produto{
   constructor(nome,dataCadastro,descricao,preco){
-    nome = this.nome,
-    dataCadastro = this.dataCadastro,
-    descricao = this.descricao,
-    preco = this.preco
+    this.nome = nome
+    this.dataCadastro = dataCadastro
+    this.descricao = descricao
+    this.preco = preco 
   }
 
   mostrar_produtos(){
@@ -20,19 +20,19 @@ class ProdutoDestaque extends Produto{
     }
     mostrar_produtos_destaque(){
     return `<div>${this.nome}</div>
-    <div>${this.dataCadastro}</div>
-    <div>${this.descricao}</div>
-    <div>${this.preco}</div>
-    <div>${this.imgDestaque}</div>`
-}
+        <div>${this.dataCadastro}</div>
+        <div>${this.descricao}</div>
+        <div>${this.preco}</div>
+        <div>${this.imgDestaque}</div>`
+    }
 }
 
 //const produto = new ProdutoDestaque ("Album Face", "03-05","Album Kpop","150,00","www.imagenspng.com.br/wp-content/uploads/2022/04/flork-png-08-600x568.png")
-const produtoDois = new Produto ("Album Face", "03-05","Album Kpop","150,00")
+const produtoDois = new Produto("Album Face", "03-05","Album Kpop","150,00")
 //git init//
 
 //let produtosDest = document.getElementById("produto-destaque")
 let produtos = document.getElementById("lista-produtos")
 
 //produtosDest.insertAdjacentHTML('afterbegin', 'mostrar_produtos_destaque');
-produtos.insertAdjacentHTML('afterbegin', 'mostrar_produtos');
+produtos.insertAdjacentHTML('afterbegin', produtoDois.mostrar_produtos());
