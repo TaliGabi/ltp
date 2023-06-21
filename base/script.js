@@ -1,7 +1,7 @@
 class Produto{
     constructor(nome,dataCadastro,descricao,preco){
         this.nome = nome
-        this.dataDCadrastro = dataDCadrastro
+        this.dataCadastro = dataCadastro
         this.descricao = descricao
         this.preco = preco
   }
@@ -30,6 +30,10 @@ class Produto{
   class ProdutoDestaque extends Produto{
       constructor(){
           super(nome,dataCadastro,descricao,preco,imgDestaque)
+          this.nome = nom
+          this.dataCadastro = dataCadastro
+          this.descricao = descricao
+          this.preco = preco
           this.imgDestaque = imgDestaque
       }
       mostrar_produtos_destaque(){
@@ -38,10 +42,10 @@ class Produto{
           } catch (error) {
             console.log(error) 
           }
-    }
+}
 
       exibir_produtos_destaque(){
-        if((this.nome != "") && (this.descricao != "") && (this.preco != "") && (this.dataDCadrastro != "") && (this.imgDestaque != "")){
+        if((this.nome != "") && (this.descricao != "") && (this.preco != "") && (this.dataCadastro != "") && (this.imgDestaque != "")){
         return `<div>
         <h1>${this.nome}</h1>
         <img src="${this.imgDestaque}">
