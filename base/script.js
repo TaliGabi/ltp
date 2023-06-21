@@ -48,12 +48,7 @@ class ProdutoDestaque extends Produto {
   }
 
   exibir_produtos_destaque() {
-    if (
-      this.nome !== "" &&
-      this.descricao !== "" &&
-      this.preco !== "" &&
-      this.dataCadastro !== "" &&
-      this.imgDestaque !== ""
+    if (this.nome !== "" && this.descricao !== "" && this.preco !== "" && this.dataCadastro !== "" && this.imgDestaque !== ""
     ) {
       return `<div class="produto-destaque">
         <h1>${this.nome}</h1>
