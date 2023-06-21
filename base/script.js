@@ -52,7 +52,7 @@ class ProdutoDestaque extends Produto {
     ) {
       return `<div class="produto-destaque">
         <h1>${this.nome}</h1>
-        <img src="${this.imgDestaque}" alt="Imagem de Destaque"></img>
+        <img style= src="${this.imgDestaque}" alt="Imagem de Destaque"></img>
         <p>${this.dataCadastro}</p>
         <h2>${this.descricao}</h2>
         <h2>${this.preco}</h2>
