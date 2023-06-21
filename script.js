@@ -1,4 +1,4 @@
-class Produto{
+class Produtos{
   constructor(nome,dataCadastro,descricao,preco){
     this.nome = nome
     this.dataCadastro = dataCadastro
@@ -14,7 +14,7 @@ class Produto{
 }
 }
 //
-class ProdutoDestaque extends Produto{
+class ProdutoDestaque extends Produtos{
     constructor(){
         super(nome,dataCadastro,descricao,preco,imgDestaque)
     }
@@ -28,11 +28,11 @@ class ProdutoDestaque extends Produto{
 }
 
 //const produto = new ProdutoDestaque ("Album Face", "03-05","Album Kpop","150,00","www.imagenspng.com.br/wp-content/uploads/2022/04/flork-png-08-600x568.png")
-const produtoDois = new Produto("Album Face", "03-05","Album Kpop","150,00")
+const produtoDois = new Produtos("Album Face", "03-05","Album Kpop","150,00")
 //git init//
 
 //let produtosDest = document.getElementById("produto-destaque")
-let produtos = document.getElementById("lista-produtos")
+let produto = document.getElementById("lista-produtos")
 
 //produtosDest.insertAdjacentHTML('afterbegin', 'mostrar_produtos_destaque');
-produtos.insertAdjacentHTML('afterbegin', produtoDois.mostrar_produtos());
+produto.insertAdjacentHTML('afterbegin', produtoDois.mostrar_produtos());
