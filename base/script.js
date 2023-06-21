@@ -30,15 +30,16 @@ class Produto{
   class ProdutoDestaque extends Produto{
       constructor(){
           super(nome,dataCadastro,descricao,preco,imgDestaque)
-          this.nome = nom
+          this.nome = this.nome
           this.dataCadastro = dataCadastro
           this.descricao = descricao
           this.preco = preco
           this.imgDestaque = imgDestaque
-      }
+
+    }
       mostrar_produtos_destaque(){
         try {
-            return this.mostrar_produtos_destaque();  
+            return this.exibir_produtos_destaque();  
           } catch (error) {
             console.log(error) 
           }
@@ -48,7 +49,7 @@ class Produto{
         if((this.nome != "") && (this.descricao != "") && (this.preco != "") && (this.dataCadastro != "") && (this.imgDestaque != "")){
         return `<div>
         <h1>${this.nome}</h1>
-        <img src="${this.imgDestaque}">
+        <img src="${this.imgDestaque}"></img>
         <p>${this.dataCadastro}</p>
         <h2>${this.descricao}</h2>
         <h2>${this.preco}</h2></div>`
@@ -56,12 +57,12 @@ class Produto{
     }
   }   
   
-  const produto = new ProdutoDestaque ("Album Face", "03-05","Album Kpop","150,00","www.imagenspng.com.br/wp-content/uploads/2022/04/flork-png-08-600x568.png")
+  const produtoUm = new ProdutoDestaque ("Album Face", "03-05","Album Kpop","150,00","www.imagenspng.com.br/wp-content/uploads/2022/04/flork-png-08-600x568.png")
   const produtoDois = new Produto("Album Face", "03-05","Album Kpop","150,00");
   let produtosDest = document.getElementById("produto-destaque")
   let produtos = document.getElementById("lista-produtos");
   
-  produtosDest.insertAdjacentHTML('afterbegin', produto.exibir_produtos_destaque());
+  produtosDest.insertAdjacentHTML('afterbegin', produtoUm.exibir_produtos_destaque());
   produtos.insertAdjacentHTML('afterbegin', produtoDois.exibir_produtos());
    //git init//
 
