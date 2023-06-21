@@ -30,13 +30,25 @@ class Produto{
   class ProdutoDestaque extends Produto{
       constructor(){
           super(nome,dataCadastro,descricao,preco,imgDestaque)
+          this.imgDestaque = imgDestaque
       }
       mostrar_produtos_destaque(){
-      return `<div>${this.nome}</div>
-          <div>${this.dataCadastro}</div>
-          <div>${this.descricao}</div>
-          <div>${this.preco}</div>
-          <div>${this.imgDestaque}</div>`
+        try {
+            return this.mostrar_produtos_destaque();  
+          } catch (error) {
+            console.log(error) 
+          }
+    }
+
+      exibir_produtos_destaque(){
+        if((this.nome != "") && (this.descricao != "") && (this.preco != "") && (this.dataDCadrastro != "") && (this.imgDestaque != "")){
+        return `<div>
+        <h1>${this.nome}</h1>
+        <img src="${this.imgDestaque}">
+        <p>${this.dataCadastro}</p>
+        <h2>${this.descricao}</h2>
+        <h2>${this.preco}</h2></div>`
+      }
     }
   }   
   
@@ -45,7 +57,7 @@ class Produto{
   let produtosDest = document.getElementById("produto-destaque")
   let produtos = document.getElementById("lista-produtos");
   
-  produtosDest.insertAdjacentHTML('afterbegin', produto.exibir_produtos());
+  produtosDest.insertAdjacentHTML('afterbegin', produto.exibir_produtos_destaque());
   produtos.insertAdjacentHTML('afterbegin', produtoDois.exibir_produtos());
    //git init//
 
