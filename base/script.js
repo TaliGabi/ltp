@@ -30,10 +30,6 @@ class Produto{
   class ProdutoDestaque extends Produto{
       constructor(){
           super(nome,dataCadastro,descricao,preco,imgDestaque)
-          this.nome = this.nome
-          this.dataCadastro = dataCadastro
-          this.descricao = descricao
-          this.preco = preco
           this.imgDestaque = imgDestaque
 
     }
